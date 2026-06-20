@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "ecommerce_website_django/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      "src": "aura/wsgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "ecommerce_website_django/wsgi.py"
+      "dest": "aura/wsgi.py"
     }
   ]
 }
