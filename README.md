@@ -66,4 +66,5 @@ python scratch/seed_products.py
 
 ---
 Maintainer: Basil Joseph
-License: MIT# Aura
+License: MIT
+
