@@ -48,14 +48,14 @@
                         <span class="checkout-item-name">{{ cart.item.name }}</span>
                         <span class="checkout-item-qty">Qty: {{ cart.quantity }}</span>
                     </div>
-                    <span class="checkout-item-price">&#2547; {{ cart.get_total }}</span>
+                    <span class="checkout-item-price">Rs. {{ cart.get_total }}</span>
                 </div>
                 {% endfor %}
             </div>
 
             <div class="checkout-total-row">
                 <span>Order Total</span>
-                <strong>&#2547; {{ order_total|floatformat:2 }}</strong>
+                <strong>Rs. {{ order_total|floatformat:2 }}</strong>
             </div>
 
             {% if saved_address.is_fully_filled %}

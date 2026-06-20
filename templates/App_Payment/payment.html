@@ -22,9 +22,9 @@
                 </div>
                 <div class="payment-item-info">
                     <span class="payment-item-name">{{ cart.item.name }}</span>
-                    <span class="payment-item-qty">Qty: {{ cart.quantity }} &middot; &#2547; {{ cart.item.price }}</span>
+                    <span class="payment-item-qty">Qty: {{ cart.quantity }} &middot; Rs. {{ cart.item.price }}</span>
                 </div>
-                <span class="payment-item-total">&#2547; {{ cart.get_total }}</span>
+                <span class="payment-item-total">Rs. {{ cart.get_total }}</span>
             </div>
             {% endfor %}
 
@@ -51,7 +51,7 @@
 
             <div class="payment-total-row">
                 <span>Order Total</span>
-                <strong>&#2547; {{ order_total|floatformat:2 }}</strong>
+                <strong>Rs. {{ order_total|floatformat:2 }}</strong>
             </div>
 
             <form method="POST">

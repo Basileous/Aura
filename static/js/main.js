@@ -131,13 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="cart-sb-name">${item.name}</span>
                                 <span class="cart-sb-meta">Qty: ${item.quantity}</span>
                             </div>
-                            <span class="cart-sb-price">&#2547; ${item.total.toFixed(2)}</span>
+                            <span class="cart-sb-price">Rs. ${item.total.toFixed(2)}</span>
                         `;
                         itemsContainer.insertBefore(div, emptyEl);
                     });
 
                     if (countEl) countEl.textContent = data.count + ' item' + (data.count !== 1 ? 's' : '');
-                    if (subtotalEl) subtotalEl.textContent = '৳ ' + data.subtotal.toFixed(2);
+                    if (subtotalEl) subtotalEl.textContent = 'Rs. ' + data.subtotal.toFixed(2);
                 }
             })
             .catch(() => {});

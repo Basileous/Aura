@@ -25,7 +25,7 @@
                     <a href="{% url 'App_Shop:product_detail' pk=cart.item.pk %}">
                         <h3 class="cart-item-name">{{ cart.item.name }}</h3>
                     </a>
-                    <p class="cart-item-price">&#2547; {{ cart.item.price }}</p>
+                    <p class="cart-item-price">Rs. {{ cart.item.price }}</p>
 
                     <div class="cart-qty-controls">
                         <a href="{% url 'App_Order:decrease' pk=cart.item.pk %}" class="qty-btn">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="cart-item-actions">
-                    <p class="cart-item-total">&#2547; {{ cart.get_total }}</p>
+                    <p class="cart-item-total">Rs. {{ cart.get_total }}</p>
                     <a href="{% url 'App_Order:remove' pk=cart.item.pk %}" class="remove-btn" title="Remove">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
@@ -52,7 +52,7 @@
             <h3>Order Summary</h3>
             <div class="summary-row">
                 <span>Subtotal</span>
-                <span id="cartSubtotalCalc">&#2547; 0</span>
+                <span id="cartSubtotalCalc">Rs. 0</span>
             </div>
             <div class="summary-row">
                 <span>Shipping</span>
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isNaN(val)) subtotal += val;
     });
     const sub = document.getElementById('cartSubtotalCalc');
-    if (sub) sub.textContent = '৳ ' + subtotal.toFixed(2);
+    if (sub) sub.textContent = 'Rs. ' + subtotal.toFixed(2);
 });
 </script>
 {% endblock %}

@@ -55,7 +55,7 @@
                                     <strong class="order-id">ORD-{{ order.created|date:"U" }}</strong>
                                     <span class="order-meta">{{ order.created|date:"M d, Y" }} · {{ order.items.count }} item{{ order.items.count|pluralize }}</span>
                                 </div>
-                                <span class="order-total">&#2547; {% widthratio 1 1 0 as zero %}{% for item in order.items.all %}{% if forloop.last %}{{ item.get_total }}{% endif %}{% endfor %}</span>
+                                <span class="order-total">Rs. {% widthratio 1 1 0 as zero %}{% for item in order.items.all %}{% if forloop.last %}{{ item.get_total }}{% endif %}{% endfor %}</span>
                             </div>
 
                             <!-- Product Previews -->
@@ -69,7 +69,7 @@
                                     {% endif %}
                                     <div class="order-product-info">
                                         <span class="order-product-name">{{ item.product.name }}</span>
-                                        <span class="order-product-qty">Qty: {{ item.quantity }} · &#2547; {{ item.get_total }}</span>
+                                        <span class="order-product-qty">Qty: {{ item.quantity }} · Rs. {{ item.get_total }}</span>
                                     </div>
                                 </div>
                                 {% endfor %}
@@ -109,15 +109,15 @@
                                 {% endif %}
                                 <div class="order-product-info">
                                     <span class="order-product-name">{{ item.product.name }}</span>
-                                    <span class="order-product-qty">Qty: {{ item.quantity }} · &#2547; {{ item.price }}</span>
+                                    <span class="order-product-qty">Qty: {{ item.quantity }} · Rs. {{ item.price }}</span>
                                 </div>
-                                <span class="order-item-total">&#2547; {{ item.get_total }}</span>
+                                <span class="order-item-total">Rs. {{ item.get_total }}</span>
                             </div>
                             {% endfor %}
                         </div>
                         <div class="order-card-footer">
                             <span>Order Total</span>
-                            <strong class="order-footer-total">&#2547; 0</strong>
+                            <strong class="order-footer-total">Rs. 0</strong>
                         </div>
                     </div>
                     {% endfor %}
@@ -554,7 +554,7 @@ document.querySelectorAll('.profile-order-card').forEach(card => {
         if (!isNaN(v)) sum += v;
     });
     const footer = card.querySelector('.order-footer-total');
-    if (footer) footer.textContent = '৳ ' + sum.toFixed(2);
+    if (footer) footer.textContent = 'Rs. ' + sum.toFixed(2);
 });
 </script>
 

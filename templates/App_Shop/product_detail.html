@@ -45,9 +45,9 @@
         <h1 class="product-name">{{ product.name }}</h1>
         
         <div class="product-pricing">
-            <span class="current-price">&#2547; {{ product.price }}</span>
+            <span class="current-price">Rs. {{ product.price }}</span>
             {% if product.old_price > 0 %}
-                <span class="old-price">&#2547; {{ product.old_price }}</span>
+                <span class="old-price">Rs. {{ product.old_price }}</span>
                 <span class="discount-badge">Sale</span>
             {% endif %}
         </div>
@@ -70,7 +70,7 @@
                 <i class="fa-solid fa-truck-fast"></i>
                 <div>
                     <strong>Free Shipping</strong>
-                    <p>On all orders over &#2547; 5000</p>
+                    <p>On all orders over Rs. 5000</p>
                 </div>
             </div>
             <div class="meta-item">
@@ -108,9 +108,9 @@
                     <h3 class="product-title">{{ prod.name }}</h3>
                 </a>
                 <div class="product-price-wrap">
-                    <span class="product-price">&#2547; {{ prod.price }}</span>
+                    <span class="product-price">Rs. {{ prod.price }}</span>
                     {% if prod.old_price > 0 %}
-                        <span class="product-old-price">&#2547; {{ prod.old_price }}</span>
+                        <span class="product-old-price">Rs. {{ prod.old_price }}</span>
                     {% endif %}
                 </div>
             </div>
